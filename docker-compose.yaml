@@ -32,10 +32,28 @@ services:
       MINIO_HOST: ${MINIO_HOST}
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
-
     volumes:
       - ./data/reviews:/data
       - ./scripts:/home/scripts
     entrypoint: ["/bin/sh", "-c", "/home/scripts/data-upload.sh"]
     depends_on:
       - minio
+
+  quickwit:
+    hostname: quickwit
+    container_name: quickwit
+    image: quickwit/quickwit
+    entrypoint: ["/bin/sh", "-c", "/home/scripts/indexing-review-data.sh"]
+    ports:
+      - "7280:7280"
+    environment:
+      QW_S3_ENDPOINT: ${MINIO_HOST}
+      AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD}
+
+    volumes:
+      - ./qw-conf:/quickwit/qwdata
+      - ./data/reviews:/data
+      - ./scripts:/home/scripts
+    depends_on:
+      - minio-client

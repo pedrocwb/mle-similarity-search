@@ -1,0 +1,22 @@
+
+version: 0
+index_id: reviews
+
+index_uri: s3://quickwit/index
+
+doc_mapping:
+  field_mappings:
+    - name: p_e_id
+      type: text
+      stored: true
+      tokenizer: default
+      record: position
+    - name: text
+      type: text
+      tokenizer: default
+      record: position
+      stored: true
+
+
+search_settings:
+  default_search_fields: [text]

@@ -1,0 +1,4 @@
+version: 0
+metastore_uri: s3://quickwit/index
+default_index_root_uri: s3://quickwit/index
+listen_address: 0.0.0.0
