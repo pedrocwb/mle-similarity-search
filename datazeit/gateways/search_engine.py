@@ -28,6 +28,7 @@ class QuickWitGateway(SearchEngineGateway):
     def _make_request(self, query: str, index: str) -> Dict[Any, Any]:
 
         try:
+            # TODO: this is inefficient. Needs refactoring.
             request_url = f"{self._search_url}/{index}/search?query={query}"
             data = requests.get(request_url, params={"max_hits": 0})
             num_hits = data.json()["num_hits"]
