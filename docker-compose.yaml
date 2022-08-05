@@ -33,7 +33,7 @@ services:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
     volumes:
-      - ./data/reviews:/data
+      - ./data:/data
       - ./scripts:/home/scripts
     entrypoint: ["/bin/sh", "-c", "/home/scripts/data-upload.sh"]
     depends_on:
@@ -53,7 +53,7 @@ services:
 
     volumes:
       - ./qw-conf:/quickwit/qwdata
-      - ./data/reviews:/data
+      - ./data:/data
       - ./scripts:/home/scripts
     depends_on:
       - minio-client

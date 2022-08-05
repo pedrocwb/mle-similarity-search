@@ -1,8 +1,8 @@
-from datazeit.gateways.database import ClickHouseGateway
+from datazeit.gateways.database import ClickHouseGateway, Product
 
 
 def test_get_products():
     gtw = ClickHouseGateway()
-    products = gtw.get_products(p_c_id="145")
+    product = gtw.get_product_by_variation(p_e_id="5744705805828983682")
 
-    assert products
+    assert isinstance(product, Product)
