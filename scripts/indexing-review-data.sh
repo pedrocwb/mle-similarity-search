@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export QW_CONFIG=/quickwit/qwdata/minio-qw-config.yaml
 
 quickwit index create --index-config qwdata/reviews-index-config.yaml

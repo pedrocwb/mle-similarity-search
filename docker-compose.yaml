@@ -57,3 +57,20 @@ services:
       - ./scripts:/home/scripts
     depends_on:
       - minio-client
+
+
+  clickhouse:
+    hostname: clickhouse
+    container_name: clickhouse
+    image: clickhouse/clickhouse-server
+    ports:
+      - "18123:8123"
+      - "19000:9000"
+    environment:
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: ${CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT}
+    volumes:
+      - ./data/:/data
+      - ./scripts/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+
