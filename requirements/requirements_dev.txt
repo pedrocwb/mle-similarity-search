@@ -2,3 +2,4 @@ pytest
 pytest-pycharm==0.7.0
 python-dotenv~=0.20
 responses~=0.21
+black

@@ -11,12 +11,13 @@ doc_mapping:
       stored: true
       tokenizer: default
       record: position
+      fast: true
     - name: text
       type: text
       tokenizer: default
       record: position
       stored: true
-
+      fast: true
 
 search_settings:
   default_search_fields: [text]
