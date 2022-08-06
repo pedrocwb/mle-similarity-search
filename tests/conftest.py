@@ -1,4 +1,5 @@
 import pytest
+import pandas as pd
 
 
 @pytest.fixture()
@@ -18,3 +19,15 @@ def qw_reviews_response(reviews_data):
         "elapsed_time_micros": 344481,
         "errors": [],
     }
+
+
+@pytest.fixture
+def products_df():
+    return pd.read_csv("assets/products.csv")
+
+
+@pytest.fixture
+def ingredients_df():
+    return pd.read_csv(
+        "assets/ingredients.csv",
+    )
