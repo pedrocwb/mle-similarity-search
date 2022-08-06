@@ -1,8 +1,5 @@
 FROM continuumio/miniconda3:4.10.3
 
-RUN conda create -n datazeit-mle python=3.7
-RUN conda activate datazeit-mle
-
 COPY ./requirements/requirements.txt ./requirements.txt
 COPY ./datazeit ./datazeit
 COPY ./.env  ./env
