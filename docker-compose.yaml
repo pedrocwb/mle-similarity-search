@@ -35,7 +35,7 @@ services:
     volumes:
       - ./data:/data
       - ./scripts:/home/scripts
-    entrypoint: ["/bin/sh", "-c", "/home/scripts/data-upload.sh"]
+    entrypoint: ["/bin/sh", "-c", "/home/scripts/bucket-creation.sh"]
     depends_on:
       - minio
 
@@ -52,7 +52,7 @@ services:
       AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD}
 
     volumes:
-      - ./qw-conf:/quickwit/qwdata
+      - ./quickwit-config:/quickwit/qwdata
       - ./data:/data
       - ./scripts:/home/scripts
     depends_on:
