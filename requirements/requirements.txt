@@ -1,6 +1,9 @@
 fastapi
+uvicorn
+pydantic
 requests
 confuse
 clickhouse-driver
 numpy
 SetSimilaritySearch
+pandas

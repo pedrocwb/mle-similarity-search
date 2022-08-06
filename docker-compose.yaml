@@ -74,3 +74,12 @@ services:
       - ./data/:/data
       - ./scripts/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
 
+  datazeit-api:
+    hostname: datazeit-api
+    container_name: api
+    build: .
+    ports:
+      - "8000:80"
+    depends_on:
+      - clickhouse
+      - minio-client

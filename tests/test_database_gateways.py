@@ -36,6 +36,7 @@ def test_get_product_by_variation(sql_product_results):
     assert int(p_e_id) in product.p_e_ids
 
 
+@pytest.mark.skip
 def test_get_products():
     gtw = ClickHouseGateway()
     products = gtw.get_products()
@@ -43,6 +44,7 @@ def test_get_products():
     assert products
 
 
+@pytest.mark.skip
 def test_get_ingredients():
     gtw = ClickHouseGateway()
     ingredients = gtw.get_ingredients()
