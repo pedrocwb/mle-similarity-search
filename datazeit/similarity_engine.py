@@ -1,7 +1,9 @@
-from typing import List, Tuple
+from typing import List, Tuple, Union
 
 import pandas as pd
 from SetSimilaritySearch import SearchIndex
+
+from datazeit.logger import logger
 
 
 class SimilarityEngine:
@@ -13,22 +15,39 @@ class SimilarityEngine:
         top: int = 5,
         similarity_threshold: float = 0.1,
         similarity_func_name: str = "jaccard",
-    ):
+    ) -> Union[pd.Series, None]:
         products_w_ingredients = self._process_data(products_df, ingredients_df)
-        similarity_rank = self._compute_similarity_rank(
-            p_c_id,
-            products_w_ingredients,
-            similarity_threshold,
-            similarity_func_name,
-            top,
-        )
 
+        try:
+            similarity_rank = self._compute_similarity_rank(
+                p_c_id,
+                products_w_ingredients,
+                similarity_threshold,
+                similarity_func_name,
+                top,
+            )
+        except KeyError:
+            logger.error(f"Could not find product {p_c_id}")
+            return None
+
+        if not similarity_rank:
+            logger.error(f"There are no similar products to {p_c_id}")
+            return None
+
+        idx, values = zip(*similarity_rank)
+        similarity_rank = pd.Series(values, idx, name="p_c_id")
         return similarity_rank
 
     @staticmethod
     def _process_data(
         products_df: pd.DataFrame, ingredients_df: pd.DataFrame
     ) -> pd.Series:
+
+        try:
+            products_df["p_e_ids"] = products_df["p_e_ids"].apply(lambda x: eval(x))
+        except TypeError:
+            logger.info("p_e_ids already parsed to set.")
+
         # create multiple rows  for products with multiple ingredients p_e_id
         products = products_df.explode("p_e_ids")
 

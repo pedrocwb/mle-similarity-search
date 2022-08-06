@@ -1,67 +1,51 @@
-,p_c_id,brand,title,product_type,p_e_ids
-0,145,Doppelherz,aktiv Magnesium + Calcium + D3 Nahrungsergänzungsmittel,Essential,-4007803700449622230
-1,206,Hecht-Pharma,Arginin 500 mg GPH Kapseln,Supplements,4582429877890593022
-2,281,CHI,Conditioner,Conditioner,-4334265211164896902
-3,110,Wakeup Cosmetics,Nail Lacquer,Nail polish,-331993066832349780
-4,264,Collistar,Multi-Active Deodorant 24 Hours Roll-On,Deodorants,-1415884377234764158
-5,209673,Dr. Hauschka,Regeneration Tagescreme Balance CC Cream,Day cream,-3620026155578997308
-5,209673,Dr. Hauschka,Regeneration Tagescreme Balance CC Cream,Day cream,-8206607202811183055
-6,202,Clarins,Joli Rouge Lacquer,Rouge,6155189627824709644
-7,283,Shu Uemura,Ashita Supreme Conditioner,Conditioner,6478041957349850511
-7,283,Shu Uemura,Ashita Supreme Conditioner,Conditioner,-3358174391673829824
-8,504,Arganicare,Reparaturmaske,Mask,6870016751743666964
-9,599,Wella Professionals,ReVerse,Shampoo,8483008560922272498
-10,250212,Origins,Plantscription™ Anti-Aging Power Eye Cream,Eye cream,-7430178953435507650
-11,159,Serge Lutens,Black Collection Ambre Sultan Eau de Parfum,Eau de parfum,-6370295384008491446
-12,875,DIOR,Eau Sauvage Eau de Parfum,Perfume,5129020966266990259
-12,875,DIOR,Eau Sauvage Eau de Parfum,Perfume,-2691640382354698696
-13,710,Illamasqua,Colouring Lip Pencil Lipliner,Lipliner,-3434528099967947444
-14,729,L:A Bruket,No. 094 Liquid Soap - Sage/Rosemary/Lavender,Liquid soap,-2761356429732806490
-15,1065,HAIR DOCTOR,Color Express Treatment Haarkur,Hair treatment,8533055717575411254
-15,1065,HAIR DOCTOR,Color Express Treatment Haarkur,Hair treatment,4714181788019774824
-16,840,Lancôme,Advanced Génifique Gesichtsserum,Face serum,-8543319741539703332
-16,840,Lancôme,Advanced Génifique Gesichtsserum,Face serum,-1222179826756848270
-17,1020,100BON,Eau de Thé & Gingembre,Fragrance,1058874644519000005
-18,250440,Dr. Jart+,Ceramidin™ Facial Barrier Mask,Sheet mask,7132802394803187041
-19,1196,Tom Ford,Eau de Soleil Blanc Eau de Toilette,Perfume,-8918284772774318842
-19,1196,Tom Ford,Eau de Soleil Blanc Eau de Toilette,Perfume,-3749740972769662548
-20,1329,IT Cosmetics,Brow Power Universal,Eyebrow pencil,8453100160350122467
-21,1478,Davines,Spotlight Circle Shine Hair Mask,Hair mask,8529573752506057936
-22,193,hair2heart,Bonding Extensions Echthaar #22 Goldblond 1g,Hair accessories,-4660006097412858997
-23,1184,Givenchy,Prisme 06 - Matte Primer,Primer,-1668263002218034512
-23,1184,Givenchy,Prisme 06 - Matte Primer,Primer,-4086750701001833185
-24,250699,Bumble and bumble.,Gel,Hair styling products,4065150201259324634
-25,1389,Elizabeth Arden,Purifying Cream Cleanser,Facial cleanser,7993243997132501751
-25,1389,Elizabeth Arden,Purifying Cream Cleanser,Facial cleanser,3288706455484081634
-26,1217,Sante,Deep Purify Gesichtsmaske,Face mask,-7942107999417100322
-27,1463,Alcina,Halbstark,Styling paste,3785896987345597494
-27,1463,Alcina,Halbstark,Styling paste,5469442140368297373
-28,1357,e.l.f. Cosmetics,Instant Lift Augenbrauenstift,Eyebrow pencil,1065654496527275211
-28,1357,e.l.f. Cosmetics,Instant Lift Augenbrauenstift,Eyebrow pencil,8957860971749972250
-29,1416,Arganicare,Conditioner,Conditioner,7134386080490557032
-30,192333,Exeltis,VELNATAL plus Quatrefolic Kapseln,Supplements,9215052668854022158
-31,192309,Dr.Jacobs Medical,Lactirelle Dr.Jacob's Flüssig,Supplements,978014296295853028
-32,1443,Elchim,Wooden Thermal Brush 30,Hairbrushes,-4245094257368138775
-33,1675,Bed Head by TIGI,Resurrection Conditioner,Conditioner,9037286324638964106
-34,1432,Burt's Bees,Beeswax Lip Balm Blister,Lip balm,-2453889186295827321
-35,250709,Bumble and bumble.,Thickening Volume Shampoo,Shampoo,1997919549884094801
-36,1553,Garnier,Hydra Bomb Tuchmaske Kokos,Face masks,2344330116352548382
-37,1575,Estée Lauder,Pure Color Envy Sculpting Gloss,Moisture,358522680380541970
-37,1575,Estée Lauder,Pure Color Envy Sculpting Gloss,Moisture,-1354851178657918181
-38,1688,Ducray,Creastim Lotion bei temporärem Haarausfall,Hair lotion,-2224243957891695752
-39,1560,the LOTUS,Lotus Leaf Extract Sleeping Pack Gesichtsmaske,Overnight mask,-8029184134216509986
-39,1560,the LOTUS,Lotus Leaf Extract Sleeping Pack Gesichtsmaske,Overnight mask,375298479600649663
-40,1904,FUN FACTORY,MANTA Deep Sea Blue Vibrator,Vibrators,9205999822499810089
-41,1504,Catrice,Lashes to Kill 24h No Panda Eyes Smudgeproof Mascara,Mascara,-5758824922621862934
-41,1504,Catrice,Lashes to Kill 24h No Panda Eyes Smudgeproof Mascara,Mascara,1631498912935321951
-42,1747,SALUS Pharma,Extrahair Hair Care Sys.Volumen Shampoo Schö.,Shampoo,-3983104611093939688
-43,2116,Najel,Alaun - Spray 125ml,Deodorants,8257662269392961379
-44,1725,Oliveda,Cellactive Face Cream,Face cream,8658721764642995951
-44,1725,Oliveda,Cellactive Face Cream,Face cream,-3313751760504836897
-45,2115,Luvos,Anti-Age Augenserum,Eye serum,-2539981738326476653
-45,2115,Luvos,Anti-Age Augenserum,Eye serum,6430683285967162907
-46,1693,By Terry,Baume de Rose Lip Care,Lip care,1186946807823017184
-46,1693,By Terry,Baume de Rose Lip Care,Lip care,3481975487238762427
-47,1773,INVOGUE,Eye Candy - Strip Lash - 001 Naturalise,Artificial eyelashes,4358104437993615636
-48,3508,Londa Professional,Conditioner,Conditioner,-335231192416658408
-49,2963,Jo Malone London,Tuberose Angelica,Perfume,7059386399157726058
+p_c_id,brand,title,product_type,p_e_ids
+281,CHI,Conditioner,Conditioner,{-4334265211164896902}
+1020,100BON,Eau de Thé & Gingembre,Fragrance,{1058874644519000005}
+1389,Elizabeth Arden,Purifying Cream Cleanser,Facial cleanser,"{7993243997132501751, 3288706455484081634}"
+1675,Bed Head by TIGI,Resurrection Conditioner,Conditioner,{9037286324638964106}
+1575,Estée Lauder,Pure Color Envy Sculpting Gloss,Moisture,"{358522680380541970, -1354851178657918181}"
+1904,FUN FACTORY,MANTA Deep Sea Blue Vibrator,Vibrators,{9205999822499810089}
+1747,SALUS Pharma,Extrahair Hair Care Sys.Volumen Shampoo Schö.,Shampoo,{-3983104611093939688}
+3400,Yves de Sistelle,Incidence Blossom,Fragrance,{-2226398310377770039}
+3378,John Frieda,Conditioner,Conditioner,"{3600397796930555458, 4372611347638889757}"
+4445,L´Oréal Professionnel Paris,TNA Reno Air Fix,Hairspray,"{3581794627319612275, -4346965144816730153, 3152937334468294286}"
+4389,G & M Naturwaren Import,Spirulina Tabletten,Trace elements,{-7965142698107199299}
+9495,Aminoplus,Bcaa Kapseln,Supplements,{9072254726837509759}
+4522,Inglot,Colour Play Lipliner,Lipliner,{8104483115360250934}
+4596,PAYOT,Suprême Jeunesse Le Regard Augencreme,Eye cream,{-3633208906362124245}
+5270,Schwarzkopf Professional,Argan Oil Oil-in-Shampoo,Oil,{596890290276928459}
+5579,medipharma Cosmetics,medipharma cosmetics Yunai Enzympeeling,Facial scrub,"{2779579153809133403, 6000410414807320683}"
+4793,It's Skin,The Fresh Aloe Tuchmaske,Mask sheet,"{-5692793010598963070, -7584255951634800859}"
+4752,L'Oréal Paris,Age Perfect,Coloration,{7562972969127944027}
+6152,allcura Naturheilmittel,Vitamin E Tropfen,Supplements,{5460103021476852003}
+6173,Hevert Arzneimittel,Vitamin D3 K2 Hevert Plus Kapseln,Supplements,{7260785175644724704}
+6301,sebamed,Sebamed Creme,Face cream,{-1249828522135946248}
+5051,CHANEL,OMBRE PREMIÈRE LAQUE,Contour,"{5389732236505476750, 771129735390174373, -6718317045221191040}"
+6332,Erborian,Elixir au Ginseng,Face serum,"{892154899651042379, -5044626482328301722}"
+5724,,,Face cream,{1082525349278153351}
+5730,WLDOHO,SUED - Ständer klein gold,Accessories,{2061148911551928043}
+6560,Australian Bodycare,Face Wash,Cleansing gel,{6605104834970077193}
+6408,Nature Box,Nährpflege Festes Shampoo mit Argan-Öl Haarshampoo,Solid shampoo,"{7833049634078941741, -4438793054605177029}"
+5773,CHANEL,ROUGE ALLURE INK FUSION Liquid Lipstick,Liquid Lipstick,"{1855664542977747076, 7116288166692883177}"
+6171,ID Hair,Root Lifter,Root lifter,{1044393267701722811}
+6223,Gillette,Fusion5 Rasierapparat mit 2 Klingen,Razor,{-8113137417288614974}
+6738,Guerlain,Eau de Parfum Spray,Fragrance,"{4121108852195689084, 6803628958709669444}"
+201,Anastasia Beverly Hills,Lip Gloss,Lip gloss,{6275206485616749798}
+6777,Alvarez Gomez,Eau de Parfum Spray,Eau de parfum,{5020944673469471777}
+6863,Bruno Banani,Eau de Parfum Spray,Eau de parfum,{2878464897392246806}
+6311,Yves Saint Laurent,Holiday Sets,Care gift sets,{-4863884864068827202}
+6327,Londa Professional,Post-Perm Treatment,Hair treatment,{-6876872811086809954}
+7034,Lalique,Pour Homme Lion Eau de Parfum,Perfume,"{-7108126390624071476, 3936109603478108982}"
+6366,Goldwell,Thickener,Hair colors,{-6631255335312390244}
+7071,Miro,Eau de Parfum Spray,Eau de parfum,{6177104277771163873}
+7093,Guerlain,Absolus d'Orient Musc Noble Eau de Parfum,Unisex perfume,"{7191495186807888733, 8539682188906695312, 5158222232600543341}"
+6300,Chiara Ambra,Lifting Serum Ampullen 7 Tage Kur,Face serum,{-1162275883774024245}
+7140,Zadig&Voltaire,This is Him! Eau de Toilette,Perfume,"{-594026014979301048, 1075687511449340788}"
+7154,,,Perfume,{8828155813012248813}
+7303,Sans Soucis,Perfect Lift Flüssige Foundation,Foundation,"{9025732257199341806, 6378648239057688912}"
+7126,Kneipp,,Shower gel,"{-385570061004883649, -3613073551610901824}"
+7224,Kneipp,Hautzart Mandelblüten Körpercreme,Body lotion,"{3429078154342162255, 8488150155096624117}"
+7357,Kneipp,Schönheitsgeheimnis Körpercreme,Body lotion,"{8701205100293787658, 5551016429709369021}"
+7408,,,Perfume,{4947229184918604012}
+6674,JARDIN DE FRANCE,Eau de Parfum Spray,Eau de parfum,{-4530313851895729079}
+7433,Avène,Couvrance Kompakt Cr.-Make-up reich. 2.5 beige,Foundation,"{-3384068369074270764, -1405717138259497085, 2696298269181670484}"
