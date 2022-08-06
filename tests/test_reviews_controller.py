@@ -65,7 +65,7 @@ def test_run_search(reviews_controller, products, reviews_count):
         side_effect=products
     )
 
-    res = reviews_controller.run_search("Sun Protection")
+    res = reviews_controller.compute_reviews("Sun Protection")
 
     for rc in res["brands"]:
         if rc["brand"] == "brand_1":

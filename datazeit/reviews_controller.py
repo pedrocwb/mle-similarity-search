@@ -24,7 +24,7 @@ class ReviewsController:
         self.search_engine_gtw = search_engine_gtw
         self.database_gtw = database_gtw
 
-    def run_search(self, keywords: str):
+    def compute_reviews(self, keywords: str):
         review_count_dict = self._get_reviews_count(keywords)
         products = [
             (p_e_id, self.database_gtw.get_product_by_variation(p_e_id))
