@@ -7,7 +7,7 @@ clickhouse-client -n <<-EOSQL
 	CREATE TABLE IF NOT EXISTS datazeit.ingredients (
     p_e_id Int64,
     ingr_id Int64,
-    incl_name String,
+    inci_name String,
 	) ENGINE = MergeTree()
 	PRIMARY KEY (p_e_id);
 
