@@ -4,18 +4,6 @@ import pytest
 from datazeit.similarity_engine import SimilarityEngine
 
 
-@pytest.fixture
-def products_df():
-    return pd.read_csv("assets/products.csv")
-
-
-@pytest.fixture
-def ingredients_df():
-    return pd.read_csv(
-        "assets/ingredients.csv",
-    )
-
-
 def test_process_data(products_df, ingredients_df):
     engine = SimilarityEngine()
     processed_data = engine._process_data(
@@ -52,14 +40,14 @@ def prod_with_ingredients_series():
             ["I", "J", "K"],
             ["B", "C", "D"],
         ],
-        index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        index=[10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
     )
 
 
 def test_compute_similarity_rank(prod_with_ingredients_series):
     engine = SimilarityEngine()
     similarity_rank = engine._compute_similarity_rank(
-        p_c_id=0,
+        p_c_id=10,
         prods_with_ingredients=prod_with_ingredients_series,
         similarity_threshold=0.1,
         similarity_func_name="jaccard",
