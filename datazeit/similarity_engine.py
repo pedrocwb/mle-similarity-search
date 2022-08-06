@@ -35,6 +35,8 @@ class SimilarityEngine:
             return None
 
         idx, values = zip(*similarity_rank)
+        idx = products_w_ingredients.iloc[list(idx)].index
+
         similarity_rank = pd.Series(values, idx, name="p_c_id")
         return similarity_rank
 
