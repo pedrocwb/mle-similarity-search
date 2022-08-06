@@ -7,3 +7,4 @@ clickhouse-driver
 numpy
 SetSimilaritySearch
 pandas
+python-dotenv

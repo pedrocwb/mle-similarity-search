@@ -40,7 +40,7 @@ class DatabaseGateway(ABC):
 
 class ClickHouseGateway(DatabaseGateway):
     def __init__(self, client: Client = None):
-        self._client = client or Client(**config["database-conf"].get(dict))
+        self._client = client or Client(**config["database"].get(dict))
 
     def get_product_by_variation(self, p_e_id: str) -> "Product":
         query = """

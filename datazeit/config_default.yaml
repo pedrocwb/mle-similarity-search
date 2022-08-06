@@ -3,7 +3,7 @@
 search_engine:
   url: http://127.0.0.1:7280/api/v1
 
-database-conf:
+database:
   database: datazeit
   host: http://127.0.0.1
   port: 19000
