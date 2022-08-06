@@ -1,0 +1,3 @@
+class SimilarityEngine:
+    def compute_similarity(self):
+        ...
