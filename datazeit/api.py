@@ -60,7 +60,7 @@ def compute_similar_products(request_payload: IngredientsSimilarityRequest):
 
     try:
         controller = IngredientsController(database_gtw=ClickHouseGateway())
-        res = controller.find_similar_products(p_c_id=request_payload.p_c_id)
+        res = controller.find_similar_products(p_c_id=int(request_payload.p_c_id))
 
     except Exception as e:
         logger.exception(e.args[0])
