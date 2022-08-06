@@ -19,8 +19,8 @@ def sql_product_results():
     ]
 
 
-def test_get_products(sql_product_results):
-    gtw = ClickHouseGateway(client=Client.from_url("clickhouse://host"))
+def test_get_product_by_variation(sql_product_results):
+    gtw = ClickHouseGateway(client=Client.from_url(url="clickhouse://host/db'"))
     gtw._client.execute = MagicMock(return_value=sql_product_results)
     p_e_id = "5744705805828983682"
 
@@ -34,3 +34,17 @@ def test_get_products(sql_product_results):
     assert product.product_type == sql_product_results[0][3]
     assert product.p_e_ids == sql_product_results[0][4]
     assert int(p_e_id) in product.p_e_ids
+
+
+def test_get_products():
+    gtw = ClickHouseGateway()
+    products = gtw.get_products()
+
+    assert products
+
+
+def test_get_ingredients():
+    gtw = ClickHouseGateway()
+    ingredients = gtw.get_ingredients()
+
+    assert ingredients

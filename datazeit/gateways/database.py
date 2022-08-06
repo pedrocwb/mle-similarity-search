@@ -17,13 +17,24 @@ class Product:
     p_e_ids: List[int]
 
 
+@dataclasses.dataclass
+class Ingredient:
+    p_e_id: int
+    ingr_id: int
+    inci_name: str
+
+
 class DatabaseGateway(ABC):
     @abc.abstractmethod
     def get_product_by_variation(self, p_e_id: str) -> Product:
         raise NotImplementedError
 
     @abc.abstractmethod
-    def get_ingredients(self, p_e_id: str) -> List["Ingredient"]:
+    def get_products(self) -> List[Product]:
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_ingredients(self) -> List[Ingredient]:
         raise NotImplementedError
 
 
@@ -52,5 +63,40 @@ class ClickHouseGateway(DatabaseGateway):
             p_e_ids=result[4],
         )
 
-    def get_ingredients(self, p_e_id: str) -> List["Ingredient"]:
-        pass
+    def get_products(self) -> List[Product]:
+        query = """
+            SELECT 
+                p_c_id, 
+                brand, 
+                title, 
+                product_type,
+                p_e_ids
+            FROM products
+        """
+        result = self._client.execute(query)
+
+        return [
+            Product(
+                p_c_id=prod[0],
+                brand=prod[1],
+                title=prod[2],
+                product_type=prod[3],
+                p_e_ids=prod[4],
+            )
+            for prod in result
+        ]
+
+    def get_ingredients(self) -> List[Ingredient]:
+        query = """
+            SELECT 
+                p_e_id, 
+                ingr_id,
+                inci_name
+            FROM ingredients
+        """
+        result = self._client.execute(query)
+
+        return [
+            Ingredient(p_e_id=ing[0], ingr_id=ing[1], inci_name=ing[2])
+            for ing in result
+        ]
