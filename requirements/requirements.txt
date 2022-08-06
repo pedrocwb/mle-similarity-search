@@ -3,3 +3,4 @@ requests
 confuse
 clickhouse-driver
 numpy
+SetSimilaritySearch

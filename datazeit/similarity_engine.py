@@ -1,16 +1,29 @@
+from typing import List, Tuple
+
 import pandas as pd
+from SetSimilaritySearch import SearchIndex
 
 
 class SimilarityEngine:
     def compute_similarity(
         self,
-        p_c_id: str,
+        p_c_id: int,
         products_df: pd.DataFrame,
         ingredients_df: pd.DataFrame,
-        similarity_threshold: float = 0.1,
         top: int = 5,
+        similarity_threshold: float = 0.1,
+        similarity_func_name: str = "jaccard",
     ):
-        ...
+        products_w_ingredients = self._process_data(products_df, ingredients_df)
+        similarity_rank = self._compute_similarity_rank(
+            p_c_id,
+            products_w_ingredients,
+            similarity_threshold,
+            similarity_func_name,
+            top,
+        )
+
+        return similarity_rank
 
     @staticmethod
     def _process_data(
@@ -40,3 +53,30 @@ class SimilarityEngine:
         )
 
         return prods_w_ingredients
+
+    @staticmethod
+    def _compute_similarity_rank(
+        p_c_id: int,
+        prods_with_ingredients: pd.Series,
+        similarity_threshold: float,
+        similarity_func_name: str,
+        top: int,
+    ) -> List[Tuple[int, float]]:
+        """
+        Compute the distance of all products ingredients for the p_c_id to search
+        and returns the top first results.
+        """
+        to_search = prods_with_ingredients.loc[p_c_id]
+
+        sets = list(prods_with_ingredients)
+        index = SearchIndex(
+            sets,
+            similarity_func_name=similarity_func_name,
+            similarity_threshold=similarity_threshold,
+        )
+        results = index.query(to_search)
+        results.sort(key=lambda k: k[1], reverse=True)
+
+        # return top N similar ingredients
+        # ignore the 1st because it's the actual product to search
+        return results[1 : top + 1]
