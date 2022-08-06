@@ -2,6 +2,7 @@
 
 echo "Creating conda environment"
 conda create -n datazeit-mle python=3.7
+conda activate datazeit-mle
 
 echo "installing pip packages"
 pip install -r requirements/requirements.txt
