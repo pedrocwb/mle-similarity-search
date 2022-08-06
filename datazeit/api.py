@@ -1,14 +1,12 @@
-from urllib.request import Request
-
 from fastapi import APIRouter, FastAPI, status, HTTPException
 
 from pydantic import BaseModel
 
 from datazeit.gateways.database import ClickHouseGateway
 from datazeit.gateways.search_engine import QuickWitGateway
-from datazeit.ingredients_controller import IngredientsController
+from datazeit.controllers.ingredients_controller import IngredientsController
 from datazeit.logger import logger
-from datazeit.reviews_controller import ReviewsController
+from datazeit.controllers.reviews_controller import ReviewsController
 
 app = FastAPI()
 router = APIRouter(prefix="/api/v1")

@@ -4,7 +4,7 @@ import pytest
 
 from datazeit.gateways.database import ClickHouseGateway, Product
 from datazeit.gateways.search_engine import QuickWitGateway
-from datazeit.reviews_controller import ReviewsController
+from datazeit.controllers.reviews_controller import ReviewsController
 
 
 @pytest.fixture

@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock
 from datazeit.gateways.database import ClickHouseGateway
-from datazeit.ingredients_controller import IngredientsController
+from datazeit.controllers.ingredients_controller import IngredientsController
 
 
 def test_find_similar_products(products_df, ingredients_df):
