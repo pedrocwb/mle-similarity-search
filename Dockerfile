@@ -2,7 +2,7 @@ FROM continuumio/miniconda3:4.10.3
 
 COPY ./requirements/requirements.txt ./requirements.txt
 COPY ./datazeit ./datazeit
-COPY ./.env  ./env
+COPY ./.env  ./.env
 
 RUN /opt/conda/bin/pip install -r requirements.txt
 RUN /opt/conda/bin/pip install --no-deps -e /datazeit
