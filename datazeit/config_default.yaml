@@ -1,10 +1,10 @@
 
 
 search_engine:
-  url: http://127.0.0.1:7280/api/v1
+  url: http://quickwit:7280/api/v1
 
 database:
   database: datazeit
-  host: 0.0.0.0
+  host: http://clickhouse
   port: 19000
 

@@ -84,3 +84,6 @@ services:
     depends_on:
       - clickhouse
       - minio-client
+    links:
+      - "quickwit"
+      - "clickhouse"

@@ -1,5 +1,6 @@
 import abc
 import dataclasses
+import os
 from abc import ABC
 from typing import Dict, List
 
@@ -40,7 +41,12 @@ class DatabaseGateway(ABC):
 
 class ClickHouseGateway(DatabaseGateway):
     def __init__(self, client: Client = None):
-        self._client = client or Client(**config["database"].get(dict))
+        user = os.environ["CLICKHOUSE_USER"]
+        password = os.environ["CLICKHOUSE_PASSWORD"]
+
+        self._client = client or Client(
+            **config["database"].get(dict), user=user, password=password
+        )
 
     def get_product_by_variation(self, p_e_id: str) -> "Product":
         query = """
