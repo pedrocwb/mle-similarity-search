@@ -44,7 +44,7 @@ class SimilarityEngine:
     def _process_data(
         products_df: pd.DataFrame, ingredients_df: pd.DataFrame
     ) -> pd.Series:
-
+        logger.info("Start processing products and ingredients dataframes")
         try:
             products_df["p_e_ids"] = products_df["p_e_ids"].apply(lambda x: eval(x))
         except TypeError:
@@ -72,7 +72,7 @@ class SimilarityEngine:
         prods_w_ingredients = prods_w_ingredients.apply(
             lambda x: list(set([c for li in x for c in li]))
         )
-
+        logger.info("Done processing products and ingredients dataframes.")
         return prods_w_ingredients
 
     @staticmethod
@@ -87,6 +87,8 @@ class SimilarityEngine:
         Compute the distance of all products ingredients for the p_c_id to search
         and returns the top first results.
         """
+
+        logger.info("Start computing similarity rank.")
         to_search = prods_with_ingredients.loc[p_c_id]
 
         sets = list(prods_with_ingredients)
@@ -98,6 +100,7 @@ class SimilarityEngine:
         results = index.query(to_search)
         results.sort(key=lambda k: k[1], reverse=True)
 
+        logger.info("Done computing similarity rank.")
         # return top N similar ingredients
         # ignore the 1st because it's the actual product to search
         return results[1 : top + 1]
