@@ -3,6 +3,7 @@ import csv
 import json
 import logging
 import sys
+from pathlib import Path
 
 try:
     import requests
@@ -15,6 +16,7 @@ except ImportError:
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger("DatazeitETL")
 
+ROOT_DIR = os.path.dirname(Path(os.path.abspath(__file__)).parent)
 
 REVIEWS_CSV_URL = (
     "https://s3.eu-central-1.wasabisys.com/dz-shared/wilhelm/cp_ml_eng_reviews.csv"
@@ -33,8 +35,9 @@ class DatazeitETL:
 
     def run(self):
         logger.info("Running Datazeit ETL.")
+        logger.info(f"Data will be saved to {ROOT_DIR}/data")
 
-        os.makedirs("../data", exist_ok=True)
+        os.makedirs(f"{ROOT_DIR}/data", exist_ok=True)
 
         self.download_reviews_data()
         self.download_products_data()
@@ -58,7 +61,9 @@ class DatazeitETL:
 
     def download_reviews_data(self):
         logger.info("Downloading and converting Reviews data")
-        save_path = f"../data/{REVIEWS_CSV_URL.split('/')[-1].replace('.csv', '.json')}"
+        save_path = (
+            f"{ROOT_DIR}/data/{REVIEWS_CSV_URL.split('/')[-1].replace('.csv', '.json')}"
+        )
 
         if not self._check_file_exists(save_path):
             cr = self._download_file(REVIEWS_CSV_URL)
