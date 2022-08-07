@@ -32,12 +32,13 @@ INGREDIENTS_CSV_URL = (
 class DatazeitETL:
     def __init__(self):
         self._session = requests.session()
+        self._save_dir = f"{ROOT_DIR}/data"
 
     def run(self):
         logger.info("Running Datazeit ETL.")
-        logger.info(f"Data will be saved to {ROOT_DIR}/data")
+        logger.info(f"Data will be saved to {self._save_dir}")
 
-        os.makedirs(f"{ROOT_DIR}/data", exist_ok=True)
+        os.makedirs(self._save_dir, exist_ok=True)
 
         self.download_reviews_data()
         self.download_products_data()
@@ -61,9 +62,7 @@ class DatazeitETL:
 
     def download_reviews_data(self):
         logger.info("Downloading and converting Reviews data")
-        save_path = (
-            f"{ROOT_DIR}/data/{REVIEWS_CSV_URL.split('/')[-1].replace('.csv', '.json')}"
-        )
+        save_path = f"{self._save_dir}/{REVIEWS_CSV_URL.split('/')[-1].replace('.csv', '.json')}"
 
         if not self._check_file_exists(save_path):
             cr = self._download_file(REVIEWS_CSV_URL)
@@ -78,9 +77,7 @@ class DatazeitETL:
 
     def download_products_data(self):
         logger.info("Downloading and converting Products data")
-        save_path = (
-            f"../data/{PRODUCTS_CSV_URL.split('/')[-1].replace('.csv', '.json')}"
-        )
+        save_path = f"{self._save_dir}/{PRODUCTS_CSV_URL.split('/')[-1].replace('.csv', '.json')}"
         cr = self._download_file(PRODUCTS_CSV_URL)
         if not self._check_file_exists(save_path):
             with open(save_path, "w+") as json_fp:
@@ -103,9 +100,7 @@ class DatazeitETL:
 
     def download_ingredients_data(self):
         logger.info("Downloading and converting Ingredients data")
-        save_path = (
-            f"../data/{INGREDIENTS_CSV_URL.split('/')[-1].replace('.csv', '.json')}"
-        )
+        save_path = f"{self._save_dir}/{INGREDIENTS_CSV_URL.split('/')[-1].replace('.csv', '.json')}"
         if not self._check_file_exists(save_path):
             cr = self._download_file(INGREDIENTS_CSV_URL)
 
