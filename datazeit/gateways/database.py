@@ -43,9 +43,10 @@ class ClickHouseGateway(DatabaseGateway):
     def __init__(self, client: Client = None):
         user = os.environ["CLICKHOUSE_USER"]
         password = os.environ["CLICKHOUSE_PASSWORD"]
+        host = os.environ["CLICKHOUSE_HOST"]
 
         self._client = client or Client(
-            **config["database"].get(dict), user=user, password=password
+            host=host, user=user, password=password, **config["database"].get(dict)
         )
 
     def get_product_by_variation(self, p_e_id: str) -> "Product":

@@ -79,6 +79,7 @@ services:
     ports:
       - "8000:80"
     environment:
+      CLICKHOUSE_HOST: ${CLICKHOUSE_HOST}
       CLICKHOUSE_USER: ${CLICKHOUSE_USER}
       CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
     depends_on:
@@ -86,4 +87,3 @@ services:
       - minio-client
     links:
       - "quickwit"
-      - "clickhouse"

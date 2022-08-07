@@ -5,6 +5,6 @@ search_engine:
 
 database:
   database: datazeit
-  host: http://clickhouse
   port: 19000
+
 

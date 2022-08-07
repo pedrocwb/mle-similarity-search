@@ -1,9 +1,9 @@
 FROM continuumio/miniconda3:4.10.3
 
 COPY ./requirements/requirements.txt ./requirements.txt
-COPY ./datazeit ./datazeit
-
 RUN /opt/conda/bin/pip install -r requirements.txt
+
+COPY ./datazeit ./datazeit
 RUN /opt/conda/bin/pip install --no-deps -e /datazeit
 
 WORKDIR /
