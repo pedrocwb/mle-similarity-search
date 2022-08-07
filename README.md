@@ -31,6 +31,10 @@ The endpoint receives a product cluster-id (p_c_id) and should respond with the 
 	3.4 Start the application with Docker Compose. The docker compose spins up MinIO, Quickwit, ClickHouse and the Datazeit API. 
 
 
+## Application Logs
+
+The application logs will all be recorded in the file `datazeit-api.log` saved in the project root directory.
+
 ## Application Improvements
 
 Due to time constraints, the current application presents some performance issues that should be addressed if we ever want to deploy this project into a production environment. 
