@@ -12,10 +12,10 @@ The endpoint receives a text and should respond with products that include the s
 The endpoint receives a product cluster-id (p_c_id) and should respond with the top 5 products which are similarly based on the ingredients of the provided product cluster id.
 
 ### High-Level System Diagram
-<img src="docs/system-diagram.jpeg" alt="drawing" width="500"/>
+<img src="docs/system-diagram.jpeg" alt="drawing" width="600"/>
 
 ### Class Diagram
-<img src="docs/class-diagram.jpeg" alt="drawing" width="500"/>
+<img src="docs/class-diagram.jpeg" alt="drawing" width="600"/>
 
 
 ## Setting up the project
